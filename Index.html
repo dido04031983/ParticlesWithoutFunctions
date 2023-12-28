@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <style>
+body{
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: black;
+}
+canvas{
+  margin: 1px;
+  overflow: scroll;
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 10px;
+  width: calc(100vw - 4px);
+  height: calc(100vh - 4px);
+  image-rendering: pixelated;
+  shape-rendering: pixelated;
+}
+
+    </style>
+    <title>Balls in the Sky</title>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script src="script.js"></script>
+    <script>
+
+requestAnimationFrame(function(time){
+  requestAnimationFrame(arguments.callee);
+  if(IterationActive){
+    IteratorModule(time);
+  }
+});
+
+    </script>
+  </body>
+</html>
